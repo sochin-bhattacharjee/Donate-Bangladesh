@@ -15,13 +15,20 @@ document.getElementById('history').addEventListener('click',function(){
 })
 
 // total amount
-const totalAmount = document.getElementById('total-amount').innerText;
+
 
 // Donate Now Button function 1
 function addAmount1(){
+    const totalAmount = document.getElementById('total-amount').innerText;
     const heading1 = document.getElementById('heading-1').innerText;
     const input1 = document.getElementById('input-1').value;
-    if(isNaN(input1) == false && input1 > 0){
+    document.getElementById('modal-coin').innerText = input1+' BDT';
+    document.getElementById('input-1').value='';
+    if(parseInt(totalAmount) < parseInt(input1)){
+        alert('Insufficient value');
+        return;
+    }
+    if(!isNaN(input1) && input1 > 0){
         const increaseAmount1 = document.getElementById('increase-amount-1');
         const increase1 = parseFloat(increaseAmount1.innerText) + parseFloat(input1);
         document.getElementById('increase-amount-1').innerText = increase1;
@@ -41,16 +48,26 @@ function addAmount1(){
         document.getElementById('no-history').classList.add('hidden')
         my_modal_1.showModal()
     }
+    else if(isNaN(input1)){
+        alert('Not a valid amount !!!')
+    }
     else{
-        alert('hi')
+        alert('No amount added !!!')
     }
 }
 
 // Donate Now Button function 2
 function addAmount2(){
+    const totalAmount = document.getElementById('total-amount').innerText;
     const input2 = document.getElementById('input-2').value;
+    document.getElementById('input-2').value='';
+    document.getElementById('modal-coin').innerText = input2+' BDT';
     const heading2 = document.getElementById('heading-2').innerText;
-    if(isNaN(input2) == false && input2 > 0){
+    if(parseInt(totalAmount) < parseInt(input2)){
+        alert('Insufficient value');
+        return;
+    }
+    if(!isNaN(input2) && input2 > 0){
         const increaseAmount2 = document.getElementById('increase-amount-2');
         const increase2 = parseFloat(increaseAmount2.innerText) + parseFloat(input2);
         document.getElementById('increase-amount-2').innerText = increase2;
@@ -67,17 +84,28 @@ function addAmount2(){
         <p>${date}</p>
         `
         document.getElementById('historyContent').appendChild(div);
+        document.getElementById('no-history').classList.add('hidden')
         my_modal_1.showModal()
     }
+    else if(isNaN(input2)){
+        alert('Not a valid amount !!!')
+    }
     else{
-        alert('hi')
+        alert('No amount added !!!');
     }
 }
 // Donate Now Button function 3
 function addAmount3(){
+    const totalAmount = document.getElementById('total-amount').innerText;
     const input3 = document.getElementById('input-3').value;
+    document.getElementById('input-3').value='';
+    document.getElementById('modal-coin').innerText = input3+' BDT';
     const heading3 = document.getElementById('heading-3').innerText;
-    if(isNaN(input3) == false && input3 > 0){
+    if(parseInt(totalAmount) < parseInt(input3)){
+        alert('Insufficient value');
+        return;
+    }
+    if(!isNaN(input3) && input3 > 0){
         const increaseAmount3 = document.getElementById('increase-amount-3');
         const increase3 = parseFloat(increaseAmount3.innerText) + parseFloat(input3);
         document.getElementById('increase-amount-3').innerText = increase3;
@@ -94,9 +122,13 @@ function addAmount3(){
         <p>${date}</p>
         `
         document.getElementById('historyContent').appendChild(div);
+        document.getElementById('no-history').classList.add('hidden')
         my_modal_1.showModal()
     }
+    else if(isNaN(input3)){
+        alert('Not a valid amount !!!')
+    }
     else{
-        alert('hi')
+        alert('No amount added !!!')
     }
 }

@@ -22,7 +22,7 @@
         }
         .navBackground{
             background: rgba(255, 255, 255, 0.705);
-            backdrop-filter: blur(50px);
+            backdrop-filter: blur(10px);
         }
     </style>
 </head>
@@ -132,9 +132,12 @@
             <dialog id="my_modal_1" class="modal">
                 <div class="modal-box flex flex-col justify-center items-center text-center">
                     <h3 class="text-2xl lg:text-4xl font-bold mb-3">Congrats!</h3>
-                    <img src="./assets/coin.png" alt="">
+                    <div class="flex gap-2 items-center justify-center">
+                        <img src="./assets/coin.png" alt="">
+                        <p id="modal-coin" class="text-xl"></p>
+                    </div>
                     <p class="py-4">You have Donated for Humankind</p>
-                    <p class="text-xl font-bold">successfully</p>
+                    <p class="text-xl font-bold">Successfully !!!</p>
                     <div class="modal-action">
                         <form method="dialog">
                             <button class="btn justify-center">Close confirmation</button>
