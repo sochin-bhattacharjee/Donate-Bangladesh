@@ -4,6 +4,7 @@ document.getElementById('donation').addEventListener('click',function(){
     document.getElementById('donation').classList.add('bg-lime-300')
     document.getElementById('donationContent').classList.remove('hidden')
     document.getElementById('historyContent').classList.add('hidden')
+    
 })
 
 // History Button Switching & other functionality
@@ -12,6 +13,7 @@ document.getElementById('history').addEventListener('click',function(){
     document.getElementById('donation').classList.remove('bg-lime-300')
     document.getElementById('historyContent').classList.remove('hidden')
     document.getElementById('donationContent').classList.add('hidden')
+    document.getElementById('donation').classList.add('border-2')
 })
 
 // total amount
@@ -80,7 +82,7 @@ function addAmount2(){
         div.classList.add('rounded-lg');
         div.classList.add('p-4');
         div.innerHTML = `
-        <h1>${input2} Taka is ${heading2}</h1>
+        <h1 class="text-base md:text-lg font-medium md:font-semibold">${input2} Taka is ${heading2}</h1>
         <p>${date}</p>
         `
         document.getElementById('historyContent').appendChild(div);
@@ -118,7 +120,7 @@ function addAmount3(){
         div.classList.add('rounded-lg');
         div.classList.add('p-4');
         div.innerHTML = `
-        <h1>${input3} Taka is ${heading3}</h1>
+        <h1 class="text-base md:text-lg font-medium md:font-semibold">${input3} Taka is ${heading3}</h1>
         <p>${date}</p>
         `
         document.getElementById('historyContent').appendChild(div);

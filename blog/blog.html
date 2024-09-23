@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <!-- Tailwind Installation -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- DaisyUI Installation -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+        .lexend-font {
+            font-family: "Lexend", sans-serif;
+        }
+
+        .navBackground {
+            background: rgba(255, 255, 255, 0.705);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="lexend-font">
+    <header class="top-0 sticky navBackground pb-5">
+        <!-- navigation section start -->
+        <nav class="bg-[#F9F7F3] py-5 pb-10 z-20">
+            <div class="w-11/12 md:w-3/4 mx-auto flex justify-between">
+                <div class="flex p-3 rounded-xl bg-lime-300 text-xl font-semibold"><a href="../index.html"><button>Home</button></a></div>
+                <div class="flex items-center gap-4">
+                    <img class="hidden md:block" src="../assets/logo.png" alt="">
+                    <h1 class="text-xl font-semibold hidden md:block">Donate Bangladesh</h1>
+                </div>
+                <div class="flex items-center gap-1">
+                    <img src="../assets/coin.png" alt="">
+                    <h1 class="text-xl font-semibold"><span id="total-amount">575757</span> BDT</h1>
+                </div>
+            </div>
+        </nav>
+        <div class="my-3 mb-6 md:hidden">
+            <div class="flex justify-center items-center gap-4">
+                <img class="" src="../assets/logo.png" alt="">
+                <h1 class="text-xl font-semibold ">Donate Bangladesh</h1>
+            </div>
+        </div>
+        <!-- navigation section end -->
+    </header>
+    <main>
+        <!-- Accordion section start -->
+        <section class="w-11/12 md:w-10/12 mx-auto">
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is DOM ?</div>
+                <div class="collapse-content">
+                    <p>The DOM (Document Object Model) is a structured representation of an HTML document that allows JavaScript to interact with and modify the content, structure, and styles of a webpage.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is function ?</div>
+                <div class="collapse-content">
+                    <p>A function is a reusable block of code designed to perform a specific task when called.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is addEventListener() method ?</div>
+                <div class="collapse-content">
+                    <p>The `addEventListener()` method attaches an event handler to an element, allowing you to execute a function when a specified event occurs (like a click or keypress).</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is classList property ? </div>
+                <div class="collapse-content">
+                    <p>The `classList` property allows you to access and manipulate the list of classes assigned to an HTML element, such as adding, removing, or toggling classes.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Accordion section end -->
+    </main>
+</body>
+
+</html>
