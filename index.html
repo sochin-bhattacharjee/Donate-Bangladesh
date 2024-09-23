@@ -13,20 +13,24 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!--  -->
+    <!-- css -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
         .lexend-font {
             font-family: "Lexend", sans-serif;
         }
+        .navBackground{
+            background: rgba(255, 255, 255, 0.705);
+            backdrop-filter: blur(50px);
+        }
     </style>
 </head>
 
 <body class="lexend-font">
-    <header>
+    <header class="top-0 sticky navBackground pb-5">
         <!-- navigation section start -->
-        <nav class="bg-[#F9F7F3] py-5 pb-10">
+        <nav class="bg-[#F9F7F3] py-5 pb-10 z-20">
             <div class="w-11/12 md:w-3/4 mx-auto flex justify-between">
                 <div class="flex p-3 rounded-xl bg-lime-300 text-xl font-semibold"><button>Blog</button></div>
                 <div class="flex items-center gap-4">
@@ -35,7 +39,7 @@
                 </div>
                 <div class="flex items-center gap-1">
                     <img src="./assets/coin.png" alt="">
-                    <h1 class="text-xl font-medium"><span>575757</span> BDT</h1>
+                    <h1 class="text-xl font-medium"><span id="total-amount">575757</span> BDT</h1>
                 </div>
             </div>
         </nav>
@@ -46,14 +50,15 @@
             </div>
         </div>
         <!-- navigation section end -->
-    </header>
-    <main>
         <!-- Donation And History Button section start -->
         <section class="flex gap-3 justify-center mt-6">
             <button id="donation" class="flex p-3 px-5 rounded-lg bg-lime-300 text-xl font-semibold">Donation</button>
             <button id="history" class="flex p-3 px-5 rounded-lg border-[1px] text-xl font-semibold">History</button>
         </section>
         <!-- Donation And History Button section end -->
+    </header>
+    <main>
+        
 
         <!-- card section start -->
         <section id="donationContent" class="mt-6 space-y-10">
@@ -63,15 +68,15 @@
                 <div class="space-y-4">
                     <div class="flex items-center gap-1 bg-gray-100 p-2 w-32 rounded-lg">
                         <img src="./assets/coin.png" alt="">
-                        <h1 class="text-base font-normal"><span>5857</span> BDT</h1>
+                        <h1 class="text-base font-normal"><span id="increase-amount-1">5857</span> BDT</h1>
                     </div>
-                    <h1 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <h1 id="heading-1" class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                     <p class="text-lg font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
                         repudiandae perspiciatis molestias voluptates quasi! Amet expedita quidem alias, earum facere
                         modi non officiis sunt voluptatibus animi? Officia possimus hic quae.</p>
-                    <input class="w-full border-2 rounded-md p-4" placeholder="Write Donation Amount" type="text">
+                    <input id="input-1" class="w-full border-2 rounded-md p-4" placeholder="Write Donation Amount" type="text">
                     <button class="flex justify-center p-3 w-full rounded-lg bg-lime-300 text-xl font-semibold"
-                        onclick="my_modal_1.showModal()">Donate Now</button>
+                        onclick="addAmount1()">Donate Now</button>
                 </div>
             </div>
             <!-- card 1 section end -->
@@ -82,15 +87,15 @@
                 <div class="space-y-4">
                     <div class="flex items-center gap-1 bg-gray-100 p-2 w-32 rounded-lg">
                         <img src="./assets/coin.png" alt="">
-                        <h1 class="text-base font-normal"><span>5857</span> BDT</h1>
+                        <h1 class="text-base font-normal"><span id="increase-amount-2">5857</span> BDT</h1>
                     </div>
-                    <h1 class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
+                    <h1 id="heading-2" class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                     <p class="text-lg font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
                         repudiandae perspiciatis molestias voluptates quasi! Amet expedita quidem alias, earum facere
                         modi non officiis sunt voluptatibus animi? Officia possimus hic quae.</p>
-                    <input class="w-full border-2 rounded-md p-4" placeholder="Write Donation Amount" type="text">
+                    <input id="input-2" class="w-full border-2 rounded-md p-4" placeholder="Write Donation Amount" type="text">
                     <button class="flex justify-center p-3 w-full rounded-lg bg-lime-300 text-xl font-semibold"
-                        onclick="my_modal_1.showModal()">Donate Now</button>
+                        onclick="addAmount2()">Donate Now</button>
                 </div>
             </div>
             <!-- card 2 section end -->
@@ -101,15 +106,15 @@
                 <div class="space-y-4">
                     <div class="flex items-center gap-1 bg-gray-100 p-2 w-32 rounded-lg">
                         <img src="./assets/coin.png" alt="">
-                        <h1 class="text-base font-normal"><span>5857</span> BDT</h1>
+                        <h1 class="text-base font-normal"><span id="increase-amount-3">5857</span> BDT</h1>
                     </div>
-                    <h1 class="text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
+                    <h1 id="heading-3" class="text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
                     <p class="text-lg font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
                         repudiandae perspiciatis molestias voluptates quasi! Amet expedita quidem alias, earum facere
                         modi non officiis sunt voluptatibus animi? Officia possimus hic quae.</p>
-                    <input class="w-full border-2 rounded-md p-4" placeholder="Write Donation Amount" type="text">
+                    <input id="input-3" class="w-full border-2 rounded-md p-4" placeholder="Write Donation Amount" type="text">
                     <button class="flex justify-center p-3 w-full rounded-lg bg-lime-300 text-xl font-semibold"
-                        onclick="my_modal_1.showModal()">Donate Now</button>
+                        onclick="addAmount3()">Donate Now</button>
                 </div>
             </div>
             <!-- card 3 section end -->
@@ -117,13 +122,8 @@
         <!-- card section end -->
 
         <!-- History Section start -->
-        <section id="historyContent" class="mt-6 hidden">
-            <div class="border-2 lg:flex-row w-[95%] md:w-11/12 xl:w-3/4 mx-auto rounded-lg">
-                <div>
-                    <h1 class="text-lg md:text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
-                    <p class="text-lg font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae</p>
-                </div>
-            </div>
+        <section id="historyContent" class="mt-6 hidden space-y-4 w-11/12 md:w-9/12 mx-auto">
+            <p id="no-history" class="flex justify-center text-2xl text-red-500 font-medium">No History</p>
         </section>
         <!-- History Section end -->
 
@@ -137,7 +137,6 @@
                     <p class="text-xl font-bold">successfully</p>
                     <div class="modal-action">
                         <form method="dialog">
-                            <!-- if there is a button in form, it will close the modal -->
                             <button class="btn justify-center">Close confirmation</button>
                         </form>
                     </div>
