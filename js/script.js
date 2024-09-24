@@ -43,7 +43,7 @@ function addAmount1(){
         div.classList.add('rounded-lg');
         div.classList.add('p-4');
         div.innerHTML = `
-        <h1 class="text-base md:text-lg font-medium md:font-semibold">${input1} Taka is ${heading1}</h1>
+        <h1 class="text-lg font-medium md:font-semibold">${input1} Taka is ${heading1}</h1>
         <p>${date}</p>
         `
         document.getElementById('historyContent').appendChild(div);
@@ -82,7 +82,7 @@ function addAmount2(){
         div.classList.add('rounded-lg');
         div.classList.add('p-4');
         div.innerHTML = `
-        <h1 class="text-base md:text-lg font-medium md:font-semibold">${input2} Taka is ${heading2}</h1>
+        <h1 class="text-lg font-medium md:font-semibold">${input2} Taka is ${heading2}</h1>
         <p>${date}</p>
         `
         document.getElementById('historyContent').appendChild(div);
@@ -120,7 +120,7 @@ function addAmount3(){
         div.classList.add('rounded-lg');
         div.classList.add('p-4');
         div.innerHTML = `
-        <h1 class="text-base md:text-lg font-medium md:font-semibold">${input3} Taka is ${heading3}</h1>
+        <h1 class="text-lg font-medium md:font-semibold">${input3} Taka is ${heading3}</h1>
         <p>${date}</p>
         `
         document.getElementById('historyContent').appendChild(div);
